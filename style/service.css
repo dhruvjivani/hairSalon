@@ -1,0 +1,310 @@
+/* General Reset */
+* {
+  margin: 15px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f8f8f8;
+}
+/* Dark Theme Header */
+header {
+  background: #222;
+  padding: 10px 0;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Top Bar */
+.top-bar {
+  text-align: center;
+  background: #333;
+  color: #ffcc00;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 0;
+  border-bottom: 2px solid #ffcc00;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffcc00;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect */
+.nav-links a:hover {
+  background: #ffcc00;
+  color: #222;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bolder;
+  color: yellowgreen;
+}
+/* end for nav */
+
+.booking-container {
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.booking-summary {
+  display: flex;
+  flex-flow: column;
+  border: 2px solid #390123;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 5px #720451;
+}
+
+.booking-summary h2 {
+  color: black;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.booking-summary label {
+  display: block;
+  /* margin-top: 10px; */
+  font-weight: bold;
+  color: #4a4a4a;
+}
+
+.booking-summary select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  color: black;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  border: 2px solid #390123;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #720451;
+}
+
+button:hover {
+  background-color: #f4d1c7;
+}
+
+#booking-result {
+  margin-top: 20px;
+  font-size: 18px;
+  text-align: center;
+}
+
+#booking-result p {
+  margin: 10px 0;
+}
+
+footer {
+  margin-top: 20px;
+  padding: 10px 0px;
+  text-align: center;
+  background: #f4d1c7;
+  background-size: cover;
+}
+
+.checkboxcontainer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+/* Main Container */
+.booking-container {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.booking-summary {
+  background-color: #222; /* Dark card background */
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.booking-summary h2 {
+  font-size: 28px;
+  color: #ffcc00;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 16px;
+  color: #bbb; /* Light color for labels */
+  margin-bottom: 5px;
+}
+
+select,
+button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 6px;
+  background-color: #444; /* Dark background for inputs */
+  color: #f1f1f1; /* Light text */
+  font-size: 16px;
+}
+
+button {
+  background-color: #ffcc00; /* Golden button */
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e6b800; /* Hover effect */
+}
+
+.checkboxcontainer {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkboxcontainer input {
+  width: 20px;
+  height: 20px;
+}
+
+.checkboxcontainer label {
+  font-size: 16px;
+  color: #bbb;
+}
+
+/* Booking Result Section */
+#booking-result {
+  margin-top: 20px;
+  background-color: #333;
+  padding: 15px;
+  border-radius: 6px;
+  color: #fff;
+}
+
+#total-cost,
+#total-duration {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #222;
+  color: #ffcc00;
+  font-size: 14px;
+  position: relative;
+}
+
+footer a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Form Styling */
+form {
+  width: 100%;
+  max-width: 400px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Fields */
+form input[type="text"],
+form input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus {
+  border-color: #5c9ead;
+  outline: none;
+}
+
+/* Button Styling */
+form button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background-color: #b91879;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Container */
+.container {
+  /* max-width: 800px; */
+  justify-content: center;
+  justify-items: center;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  text-align: center;
+}

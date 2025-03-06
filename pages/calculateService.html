@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salon Service Booking</title>
+  <link rel="stylesheet" href="/style/service.css" />
+</head>
+
+<body>
+  <header>
+    <div class="top-bar">Choose Your Favorite Service</div>
+    <nav class="navbar">
+      <div class="nav-links">
+        <a href="/pages/index.html">Home</a>
+        <a href="/pages/about.html">About</a>
+        <a href="/pages/service.html">Services</a>
+        <a href="/pages/location.html">Location</a>
+        <a href="/pages/signup.html">Login</a>
+      </div>
+      <div class="logo">Velvet Touch Salon</div>
+    </nav>
+  </header>
+
+  <main class="booking-container">
+    <section class="booking-summary">
+      <h2>Your Booking Summary</h2>
+      <form id="service-selection-form">
+        <label for="stylist">Select Hairdresser:</label>
+        <select id="stylist">
+          <option value="DJ">Dhruv Jivani</option>
+          <option value="HP">Hari Patel</option>
+          <option value="OE">Other Employer</option>
+        </select>
+
+        <div class="checkboxcontainer">
+          <input type="checkbox" name="service" id="nailart" value="nailart" />
+          <label for="nailart">Nail Art - $50 - 60 mins</label>
+        </div>
+        <div class="checkboxcontainer">
+          <input type="checkbox" name="service" id="eyebrows" value="Eyebrows" />
+          <label for="eyebrows">Eyebrows - $20 - 20 mins</label>
+        </div>
+        <div class="checkboxcontainer">
+          <input type="checkbox" name="service" id="package" value="package" />
+          <label for="package">Hair Wash, Cutting And Coloring - $1000 - 60 mins</label>
+        </div>
+
+        <button type="button" onclick="calculateTotal()">Calculate Total</button>
+      </form>
+
+      <div id="booking-result">
+        <p><strong>Total Cost:</strong> <span id="total-cost">$0</span></p>
+        <p><strong>Total Duration:</strong> <span id="total-duration">0 mins</span></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Salon - All Rights Reserved</p>
+
+  </footer>
+
+  <script src="/javascript/caculate.js"></script>
+</body>
+
+</html>

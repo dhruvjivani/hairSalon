@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair Salon Scheduler</title>
+    <script src="/javascript/registerClient.js"></script>
+    <link rel="stylesheet" href="/style/service.css">
+</head>
+
+<body>
+    <header>
+        <div class="top-bar">Hair Salon Scheduler for Clients</div>
+        <nav class="navbar">
+            <div class="nav-links">
+                <a href="/pages">Home</a>
+                <a href="/pages/about.html">About</a>
+                <a href="/pages/service.html">Services</a>
+                <a href="/pages/location.html">Location</a>
+                <a href="/pages/signup.html">Login</a>
+            </div>
+            <div class="logo">Velvet Touch Salon</div>
+        </nav>
+    </header>
+
+    <!-- Registration Form for client -->
+    <div class="container">
+        <h2>Client Registration</h2>
+        <form id="registrationForm">
+            <input type="text" id="firstName" placeholder="First Name (Required)" required><br>
+            <input type="text" id="lastName" placeholder="Last Name (Required)" required><br>
+            <input type="text" id="phone" placeholder="Phone (Required) - Format: (123) 456-7890" required><br>
+            <input type="text" id="postalCode" placeholder="Postal Code (Required) - Format: A1A 1A1" required><br>
+            <input type="email" id="email" placeholder="Email (Required)" required><br>
+            <button type="button" onclick="registerNewClient()">Register</button>
+            <!-- <button type="button" onclick="testRedirect()">Login</button> Test button -->
+        </form>
+    </div>
+    <footer>
+        <p>&copy; Salon - All Rights Reserved</p>
+    </footer>
+</body>
+
+</html>
