@@ -80,16 +80,19 @@
             <h2>Login</h2>
 
             <!-- Username input field for login -->
-            <input type="text" id="loginUsername" placeholder="Enter username" required>
+            <input type="text" id="loginUsername" value="user@example.com" placeholder="Enter username" required>
 
             <!-- Password input field for login -->
-            <input type="password" id="loginPassword" placeholder="Enter password" required>
+            <input type="password" id="loginPassword" value="User@123" placeholder="Enter password" required>
 
             <!-- Login button -->
             <button onclick="login()">Login</button>
+            <button style="background-color: #222;" onclick="forgotpass()">Forgot password</button>
 
+            
             <!-- Message to display after login attempt -->
             <p id="loginMessage"></p>
+            <p>Create an account? <a href="#" onclick="confirmMoveToSignup()">Signup here</a></p>
         </div>
     </div>
     <!-- Footer Section: Contains copyright information -->

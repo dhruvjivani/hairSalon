@@ -1,4 +1,7 @@
-let userData = null; // Store user data globally to simulate a simple user authentication system
+let userData = {
+  username: "user@example.com",
+  password: "User@123",
+}; // Store user data globally to simulate a simple user authentication system
 
 // Function to handle user signup
 function signUp(event) {
@@ -73,17 +76,22 @@ function login() {
 
   // Clear previous login message
   loginMessage.textContent = "";
-
+  console.log(userData);
   // Check if login credentials match the stored user data
   if (
     userData &&
-    loginUsername === userData.username &&
-    loginPassword === userData.password
+    loginUsername === userData?.username &&
+    loginPassword === userData?.password
   ) {
+    loginMessage.textContent = "Login successful!"; // Shows a success message if login details are correct.
     alert("Login successful! Welcome back, " + userData.username + " 🎉");
     showMessage(loginMessage, "Login successful!", "green");
+    let baseURL = window.location.origin;
+
+    // Redirect to the homepage (assuming homepage is at the base URL)
+    window.location.href = baseURL + "/pages/index.html";
   } else {
-    showMessage(loginMessage, "Invalid username or password.", "red");
+    loginMessage.textContent = "Invalid username or password."; // Shows an error message if details are incorrect.
   }
 }
 
@@ -98,5 +106,20 @@ function confirmMoveToLogin() {
   if (confirm("Are you sure you want to move to the login page?")) {
     document.querySelector(".signup-container").style.display = "none"; // Hide signup section
     document.getElementById("loginSection").style.display = "block"; // Show login section
+  }
+}
+
+// Function to confirm whether the user wants to move to the signup page
+function confirmMoveToSignup() {
+  if (confirm("Are you sure you want to move to the Signup page?")) {
+    document.querySelector(".signup-container").style.display = "block"; // Hide signup section
+    document.getElementById("loginSection").style.display = "none"; // Show login section
+  }
+}
+
+//Forgot password
+function forgotpass() {
+  if (confirm("New Password link sent in you Email")) {
+    return null;
   }
 }
