@@ -80,14 +80,22 @@ The Hair Salon Scheduler website aims to simplify the booking process and improv
 
 For Clients:
 
-✅ Convenience – Clients can book appointments anytime, from anywhere.✅ Easy Navigation – A user-friendly interface allows clients to find the information they need quickly.✅ Exclusive Benefits – Logged-in clients enjoy discounts, early access to promotions, and special offers.✅ Time-Saving – Eliminates the need for phone calls or in-person scheduling.
+✅ Convenience – Clients can book appointments anytime, from anywhere.
+✅ Easy Navigation – A user-friendly interface allows clients to find the information they need quickly.
+✅ Exclusive Benefits – Logged-in clients enjoy discounts, early access to promotions, and special offers.
+✅ Time-Saving – Eliminates the need for phone calls or in-person scheduling.
 
 For the Salon:
 
-✅ Increased Bookings – Encourages more appointments through an efficient online system.✅ Client Retention – Keeps clients engaged with personalized services and loyalty perks.✅ Better Time Management – Streamlines scheduling by integrating hairdresser availability and service durations.✅ Enhanced Marketing – Attracts new clients by showcasing services and offering incentives.
+✅ Increased Bookings – Encourages more appointments through an efficient online system.
+✅ Client Retention – Keeps clients engaged with personalized services and loyalty perks.
+✅ Better Time Management – Streamlines scheduling by integrating hairdresser availability and service durations.
+✅ Enhanced Marketing – Attracts new clients by showcasing services and offering incentives.
 
 Conclusion
 
 The Hair Salon Scheduler is designed to offer a seamless online booking experience, improving salon-client relationships and making appointment management easier for both clients and salon staff. By incorporating easy navigation, exclusive member benefits, and efficient service listings, the platform ensures a smooth and satisfying experience for everyone.
 
-Developed By: [Your Name]Technology Stack: HTML, CSS, JavaScript, jQuery, PHP, MySQL, BootstrapProject Purpose: Web Development Course at Conestoga College
+Developed By: Dhruv
+Technology Stack: HTML, CSS, JavaScript 
+Purpose: Web Development Course at Conestoga College

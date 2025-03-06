@@ -1,24 +1,25 @@
-let userData = null; // Store user data globally
+let userData = null; // Store user data globally to simulate a simple user authentication system
 
+// Function to handle user signup
 function signUp(event) {
-  event.preventDefault();
+  event.preventDefault(); // Prevent the default form submission behavior
 
-  // Get input values
+  // Get input values from the signup form
   const username = document.getElementById("username").value.trim();
   const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value.trim();
   const confirmPassword = document
     .getElementById("confirmPassword")
     .value.trim();
-  const message = document.getElementById("message");
+  const message = document.getElementById("message"); // Message element to display errors/success
 
-  // Clear previous messages
+  // Clear any previous messages
   message.textContent = "";
 
-  // Validation rules
+  // Validation rules for user input
   if (!username || !email || !password || !confirmPassword) {
     showMessage(message, "Please fill in all fields.", "red");
-    return;
+    return; // Stop if any field is empty
   }
   if (username.length < 3) {
     showMessage(message, "Username must be at least 3 characters.", "red");
@@ -53,24 +54,27 @@ function signUp(event) {
     return;
   }
 
-  // Store user data
+  // If validation passes, store the user data in the global variable
   userData = { username, email, password };
 
   // Show success alert
   alert("Signup successful! You will be redirected to the login page.");
 
-  // Hide signup and show login form
+  // Hide the signup form and show the login form
   document.querySelector(".signup-container").style.display = "none";
   document.getElementById("loginSection").style.display = "block";
 }
 
+// Function to handle user login
 function login() {
   const loginUsername = document.getElementById("loginUsername").value.trim();
   const loginPassword = document.getElementById("loginPassword").value.trim();
-  const loginMessage = document.getElementById("loginMessage");
+  const loginMessage = document.getElementById("loginMessage"); // Message element for login feedback
 
+  // Clear previous login message
   loginMessage.textContent = "";
 
+  // Check if login credentials match the stored user data
   if (
     userData &&
     loginUsername === userData.username &&
@@ -83,16 +87,16 @@ function login() {
   }
 }
 
-// Utility function to show messages
+// Utility function to show messages (errors or success) on the page
 function showMessage(element, text, color) {
   element.textContent = text;
-  element.style.color = color;
+  element.style.color = color; // Set the text color (green for success, red for error)
 }
 
+// Function to confirm whether the user wants to move to the login page
 function confirmMoveToLogin() {
-    if (confirm("Are you sure you want to move to the login page?")) {
-        document.querySelector(".signup-container").style.display = "none";
-        document.getElementById("loginSection").style.display = "block";
-    }
+  if (confirm("Are you sure you want to move to the login page?")) {
+    document.querySelector(".signup-container").style.display = "none"; // Hide signup section
+    document.getElementById("loginSection").style.display = "block"; // Show login section
+  }
 }
-

@@ -2,61 +2,100 @@
 <html lang="en">
 
 <head>
+    <!-- Meta tags for character encoding and responsive design -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title of the page displayed in the browser tab -->
     <title>Signup & Login Page</title>
+
+    <!-- Link to external stylesheet for page styling -->
     <link rel="stylesheet" href="/style/signup.css">
+
+    <!-- Link to the external JavaScript file for interactivity -->
     <script src="/javascript/index.js"></script>
 </head>
 
 <body>
+    <!-- Header Section: Contains top bar and navigation menu -->
     <header>
         <div class="top-bar">Welcome to Hair & Beauty Salon</div>
         <nav class="navbar">
             <div class="nav-links">
+                <!-- Navigation links to different pages of the website -->
                 <a href="/pages/index.html">Home</a>
                 <a href="/pages/about.html">About</a>
                 <a href="/pages/service.html">Services</a>
                 <a href="/pages/location.html">Location</a>
                 <a href="/pages/signup.html">Login</a>
             </div>
+            <!-- Salon logo -->
             <div class="logo">Velvet Touch Salon</div>
         </nav>
     </header>
-    <div class="container">
-    <div class="signup-container">
-        <h2>Signup</h2>
-        <form id="signupForm" onsubmit="signUp(event)">
-            <div class="input-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" required>
-            </div>
-            <div class="input-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" required>
-            </div>
-            <div class="input-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" required>
-            </div>
-            <div class="input-group">
-                <label for="confirmPassword">Confirm Password:</label>
-                <input type="password" id="confirmPassword" required>
-            </div>
-            <button type="submit">Signup</button>
-            <p id="message" class="message"></p>
-            <p>Already have an account? <a href="#" onclick="confirmMoveToLogin()">Login here</a></p>
-        </form>
-    </div>
 
-    <div id="loginSection" style="display: none;">
-        <h2>Login</h2>
-        <input type="text" id="loginUsername" placeholder="Enter username" required>
-        <input type="password" id="loginPassword" placeholder="Enter password" required>
-        <button onclick="login()">Login</button>
-        <p id="loginMessage"></p>
+    <!-- Main Content Section: Signup and Login Forms -->
+    <div class="container">
+        <!-- Signup Form: Allows new users to register -->
+        <div class="signup-container">
+            <h2>Signup</h2>
+            <form id="signupForm" onsubmit="signUp(event)">
+                <!-- Username input field -->
+                <div class="input-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" required>
+                </div>
+
+                <!-- Email input field -->
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <!-- Password input field -->
+                <div class="input-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" required>
+                </div>
+
+                <!-- Confirm password input field -->
+                <div class="input-group">
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+
+                <!-- Signup button -->
+                <button type="submit">Signup</button>
+
+                <!-- Message to display after form submission -->
+                <p id="message" class="message"></p>
+
+                <!-- Link to switch to login page -->
+                <p>Already have an account? <a href="#" onclick="confirmMoveToLogin()">Login here</a></p>
+            </form>
+        </div>
+
+        <!-- Login Form: Hidden by default, shown after signup -->
+        <div id="loginSection" style="display: none;">
+            <h2>Login</h2>
+
+            <!-- Username input field for login -->
+            <input type="text" id="loginUsername" placeholder="Enter username" required>
+
+            <!-- Password input field for login -->
+            <input type="password" id="loginPassword" placeholder="Enter password" required>
+
+            <!-- Login button -->
+            <button onclick="login()">Login</button>
+
+            <!-- Message to display after login attempt -->
+            <p id="loginMessage"></p>
+        </div>
     </div>
-    </div>
+    <!-- Footer Section: Contains copyright information -->
+    <footer>
+        <p>&copy; Salon - All Rights Reserved</p>
+    </footer>
 </body>
 
 </html>

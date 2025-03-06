@@ -1,23 +1,25 @@
-/* General Reset */
+/* General Reset: Ensures that all elements have consistent padding, margin, and box-sizing */
 * {
   margin: 15px;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body Styling: Sets base font, color, and background for the entire page */
 body {
   font-family: Arial, sans-serif;
   color: #333;
   background-color: #f8f8f8;
 }
-/* Dark Theme Header */
+
+/* Dark Theme Header: Provides the dark background and padding for the header */
 header {
   background: #222;
   padding: 10px 0;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
 }
 
-/* Top Bar */
+/* Top Bar: Styles the top notification bar with centered text and a golden background */
 .top-bar {
   text-align: center;
   background: #333;
@@ -28,7 +30,7 @@ header {
   border-bottom: 2px solid #ffcc00;
 }
 
-/* Navigation Bar */
+/* Navigation Bar: Flexbox layout for navigation, with space between the items */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -38,7 +40,7 @@ header {
   margin: 0 auto;
 }
 
-/* Logo */
+/* Logo Styling: Custom font size, color, and spacing for the logo */
 .logo {
   font-size: 24px;
   font-weight: bold;
@@ -47,12 +49,13 @@ header {
   letter-spacing: 1px;
 }
 
-/* Navigation Links */
+/* Navigation Links: Aligns the navigation links in a row with spacing between them */
 .nav-links {
   display: flex;
   gap: 20px;
 }
 
+/* Styling for each navigation link */
 .nav-links a {
   text-decoration: none;
   font-size: 18px;
@@ -63,20 +66,13 @@ header {
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Hover Effect */
+/* Hover Effect for Links: Changes background color and text color on hover */
 .nav-links a:hover {
   background: #ffcc00;
   color: #222;
 }
 
-.logo {
-  font-size: 28px;
-  font-weight: bolder;
-  color: yellowgreen;
-}
-/* end for nav */
-
-/* Hero Section */
+/* Hero Section: The large introductory section on the page */
 .hero {
   display: flex;
   align-items: center;
@@ -84,6 +80,7 @@ header {
   background-color: #f8f4f2;
 }
 
+/* Hero Image: Styling the image in the hero section to take up half of the space */
 .hero-image {
   flex: 1;
   max-width: 50%;
@@ -91,24 +88,28 @@ header {
   object-fit: cover;
 }
 
+/* Hero Content: Aligns text to the right with padding */
 .hero-content {
   flex: 1;
   text-align: right;
   padding-left: 20px;
 }
 
+/* Hero Heading: Large, bold text for the title */
 .hero-content h1 {
   font-size: 48px;
   color: black;
   margin-bottom: 10px;
 }
 
+/* Hero Paragraph: Descriptive text in the hero section */
 .hero-content p {
   font-size: 18px;
   margin-bottom: 20px;
   color: #555;
 }
 
+/* Hero Button: Custom button styling with padding, background, and color */
 .hero-content .button {
   padding: 10px 20px;
   background-color: black;
@@ -119,12 +120,12 @@ header {
   font-size: 16px;
 }
 
+/* Hero Button Hover Effect: Changes the background color on hover */
 .hero-content .button:hover {
   background-color: wheat;
 }
-/* hero section end here */
 
-/* start footer  css */
+/* Footer Section: Styling for the footer with centered text */
 footer {
   margin-top: 20px;
   padding: 10px 0px;
@@ -133,27 +134,31 @@ footer {
   color: white;
   background-size: cover;
 }
+
+/* Footer Link Styling: Sets color for links and removes underlines */
 a {
   color: #ffcc00;
   text-decoration: none;
 }
+
+/* Footer List Styling: Centers the footer list */
 ul {
   text-align: center;
   margin: auto;
 }
-/* footer css  end here */
 
-/*  start location page css */
+/* Location Page Heading: Styling for the location page heading */
 .location h1 {
   text-align: center;
   margin: 20px 0;
 }
-/* location page end */
 
-/*  start Service page CSS  */
+/* Service Page: Layout for the booking cards */
 main.book {
   width: 100%;
 }
+
+/* Service Page Heading: Styling for the heading on the service page */
 .book h2 {
   text-align: center;
   color: #86065d;
@@ -161,6 +166,7 @@ main.book {
   margin: 20px;
 }
 
+/* Card Layout: Defines the layout for service cards using a grid */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -170,6 +176,8 @@ main.book {
   font-size: 18px;
   text-align: center;
 }
+
+/* Salon Card: Styling for individual salon cards */
 .salon {
   display: flex;
   flex-flow: column;
@@ -178,9 +186,13 @@ main.book {
   padding: 20px;
   box-shadow: 0 0 5px #720451;
 }
+
+/* Salon Card Heading: Margins for headings inside salon cards */
 .salon h3 {
   margin: 20px 0 0 0;
 }
+
+/* Salon Card Button: Styling for the button in the salon cards */
 .salon button {
   width: auto;
   padding: 10px;
@@ -193,14 +205,14 @@ main.book {
   border-radius: 10px;
   box-shadow: 0 0 5px #720451;
 }
+
+/* Button Link Styling: Ensures the text inside the button is white and not underlined */
 button a {
   color: white;
   text-decoration: none;
 }
 
-/* Service page CSS  end here */
-
-/* General Styles */
+/* General Body Styling: Adds a gradient background to the page */
 body {
   font-family: "Poppins", sans-serif;
   background: linear-gradient(135deg, #f8f9fa, #e3f2fd);
@@ -209,7 +221,7 @@ body {
   color: #333;
 }
 
-/* Container */
+/* Container: General styling for the main container */
 .container {
   max-width: 800px;
   margin: 50px auto;
@@ -220,7 +232,7 @@ body {
   text-align: center;
 }
 
-/* Schedule Section */
+/* Schedule Section: Special section for scheduling with a gradient background */
 .schedule-section {
   background: linear-gradient(135deg, #222, #fad0c4);
   padding: 25px;
@@ -228,11 +240,13 @@ body {
   color: white;
 }
 
+/* Schedule Heading: Font styling for the schedule section heading */
 .schedule-section h3 {
   font-size: 24px;
   margin-bottom: 10px;
 }
 
+/* Schedule Button: Button styling for scheduling actions */
 .schedule-button {
   display: inline-block;
   padding: 12px 20px;
@@ -246,26 +260,30 @@ body {
   transition: 0.3s;
 }
 
+/* Schedule Button Hover: Changes background color when hovering */
 .schedule-button:hover {
   background: #d9534f;
 }
 
-/* Welcome Section */
+/* Welcome Section: Styling for the welcome section */
 .welcome-section {
   margin-top: 30px;
   padding: 20px;
 }
 
+/* Welcome Section Heading: Styling for the welcome heading */
 .welcome-section h1 {
   font-size: 26px;
   color: #007bff;
 }
 
+/* Welcome Paragraph: Font styling for paragraphs in the welcome section */
 .welcome-section p {
   font-size: 16px;
   line-height: 1.6;
 }
 
+/* Welcome List: Custom styling for the list items in the welcome section */
 .welcome-section ul {
   list-style: none;
   padding: 0;
@@ -282,7 +300,7 @@ body {
   justify-content: center;
 }
 
-/* Login Button */
+/* Login Button: Styling for the login button */
 .login-button {
   display: inline-block;
   padding: 12px 20px;
@@ -296,11 +314,12 @@ body {
   transition: 0.3s;
 }
 
+/* Login Button Hover: Changes background color when hovering */
 .login-button:hover {
   background: #0056b3;
 }
 
-/* Welcome Section */
+/* Welcome Section Styling: Adds gradient background and padding to the welcome section */
 .welcome-section {
   background: linear-gradient(135deg, #222, #fad0c4);
   padding: 30px;
@@ -312,7 +331,7 @@ body {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Heading */
+/* Welcome Section Heading: Larger, bold heading for the welcome section */
 .welcome-section h1 {
   font-size: 28px;
   color: #007bff;
@@ -320,14 +339,14 @@ body {
   font-weight: bold;
 }
 
-/* Paragraph */
+/* Welcome Section Paragraph: Paragraph text in the welcome section */
 .welcome-section p {
   font-size: 18px;
   line-height: 1.6;
   color: #444;
 }
 
-/* List */
+/* Welcome Section List Styling: Padding and background color for the list items */
 .welcome-section ul {
   list-style: none;
   padding: 0;
@@ -345,13 +364,13 @@ body {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Hover Effect */
+/* Hover Effect for List Items: Changes the background color on hover */
 .welcome-section ul p:hover {
   background: #ffe0e5;
   transition: 0.3s ease-in-out;
 }
 
-/* Location Section */
+/* Location Section: Flexbox layout for the location container */
 .location-container {
   flex-grow: 1;
   display: flex;
@@ -362,18 +381,21 @@ body {
   padding: 50px 20px;
 }
 
+/* Location Heading: Styling for the location section heading */
 .location-container h2 {
   font-size: 32px;
   color: #333;
   margin-bottom: 15px;
 }
 
+/* Location Paragraph: Font size and color for the location section paragraph */
 .location-container p {
   font-size: 18px;
   color: #555;
   margin-bottom: 20px;
 }
 
+/* Map Styling: Ensures the map iframe takes up the majority of the page width */
 iframe {
   width: 80%;
   max-width: 800px;

@@ -2,54 +2,73 @@
 <html lang="en">
 
 <head>
+  <!-- Character encoding and viewport for mobile responsiveness -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Salon Service Booking</title>
+  <!-- Linking external CSS for styling the page -->
   <link rel="stylesheet" href="/style/service.css" />
 </head>
 
 <body>
+  <!-- Header Section -->
   <header>
+    <!-- Top bar with a short message -->
     <div class="top-bar">Choose Your Favorite Service</div>
+    
+    <!-- Navigation Bar -->
     <nav class="navbar">
       <div class="nav-links">
+        <!-- Links to various pages of the website -->
         <a href="/pages/index.html">Home</a>
         <a href="/pages/about.html">About</a>
         <a href="/pages/service.html">Services</a>
         <a href="/pages/location.html">Location</a>
         <a href="/pages/signup.html">Login</a>
       </div>
+      <!-- Logo of the salon -->
       <div class="logo">Velvet Touch Salon</div>
     </nav>
   </header>
 
+  <!-- Main Booking Section -->
   <main class="booking-container">
+    <!-- Booking Summary Section -->
     <section class="booking-summary">
       <h2>Your Booking Summary</h2>
       <form id="service-selection-form">
+        <!-- Stylist Selection -->
         <label for="stylist">Select Hairdresser:</label>
         <select id="stylist">
+          <!-- Options for choosing a stylist -->
           <option value="DJ">Dhruv Jivani</option>
           <option value="HP">Hari Patel</option>
           <option value="OE">Other Employer</option>
         </select>
 
+        <!-- Nail Art Service Checkbox -->
         <div class="checkboxcontainer">
           <input type="checkbox" name="service" id="nailart" value="nailart" />
           <label for="nailart">Nail Art - $50 - 60 mins</label>
         </div>
+
+        <!-- Eyebrow Service Checkbox -->
         <div class="checkboxcontainer">
           <input type="checkbox" name="service" id="eyebrows" value="Eyebrows" />
           <label for="eyebrows">Eyebrows - $20 - 20 mins</label>
         </div>
+
+        <!-- Hair Wash, Cutting, and Coloring Package Checkbox -->
         <div class="checkboxcontainer">
           <input type="checkbox" name="service" id="package" value="package" />
           <label for="package">Hair Wash, Cutting And Coloring - $1000 - 60 mins</label>
         </div>
 
+        <!-- Button to trigger total cost calculation -->
         <button type="button" onclick="calculateTotal()">Calculate Total</button>
       </form>
 
+      <!-- Display section for showing the calculated total cost and duration -->
       <div id="booking-result">
         <p><strong>Total Cost:</strong> <span id="total-cost">$0</span></p>
         <p><strong>Total Duration:</strong> <span id="total-duration">0 mins</span></p>
@@ -57,11 +76,12 @@
     </section>
   </main>
 
+  <!-- Footer Section -->
   <footer>
     <p>&copy; Salon - All Rights Reserved</p>
-
   </footer>
 
+  <!-- JavaScript file for handling the calculation of the total -->
   <script src="/javascript/caculate.js"></script>
 </body>
 

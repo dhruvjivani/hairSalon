@@ -2,17 +2,26 @@
 <html lang="en">
 
 <head>
+    <!-- Meta tags for character encoding and viewport for mobile responsiveness -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title of the page, appears on the browser tab -->
     <title>Hair Salon Scheduler</title>
+
+    <!-- Link to external JavaScript file for handling client registration -->
     <script src="/javascript/registerClient.js"></script>
+
+    <!-- Link to the external CSS file to style the page -->
     <link rel="stylesheet" href="/style/service.css">
 </head>
 
 <body>
+    <!-- Header Section with Navigation Bar -->
     <header>
         <div class="top-bar">Hair Salon Scheduler for Clients</div>
         <nav class="navbar">
+            <!-- Navigation links to other pages on the site -->
             <div class="nav-links">
                 <a href="/pages">Home</a>
                 <a href="/pages/about.html">About</a>
@@ -20,25 +29,33 @@
                 <a href="/pages/location.html">Location</a>
                 <a href="/pages/signup.html">Login</a>
             </div>
+            <!-- Logo of the salon -->
             <div class="logo">Velvet Touch Salon</div>
         </nav>
     </header>
 
-    <!-- Registration Form for client -->
+    <!-- Client Registration Form Section -->
     <div class="container">
         <h2>Client Registration</h2>
         <form id="registrationForm">
+            <!-- Input fields for the client details with placeholders -->
             <input type="text" id="firstName" placeholder="First Name (Required)" required><br>
             <input type="text" id="lastName" placeholder="Last Name (Required)" required><br>
             <input type="text" id="phone" placeholder="Phone (Required) - Format: (123) 456-7890" required><br>
             <input type="text" id="postalCode" placeholder="Postal Code (Required) - Format: A1A 1A1" required><br>
             <input type="email" id="email" placeholder="Email (Required)" required><br>
+
+            <!-- Button to trigger the registration process -->
             <button type="button" onclick="registerNewClient()">Register</button>
-            <!-- <button type="button" onclick="testRedirect()">Login</button> Test button -->
+            <!-- You can uncomment the next line for a test button for redirection -->
+            <!-- <button type="button" onclick="testRedirect()">Login</button> -->
         </form>
     </div>
+
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; Salon - All Rights Reserved</p>
+        <!-- Copyright information at the bottom of the page -->
+        <p>&copy; Velvet Touch Salon - All Rights Reserved</p>
     </footer>
 </body>
 

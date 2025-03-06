@@ -1,23 +1,25 @@
-/* General Reset */
+/* General Reset: Ensures that all elements have consistent padding, margin, and box-sizing */
 * {
   margin: 15px;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body Styling: Sets base font, color, and background for the entire page */
 body {
   font-family: Arial, sans-serif;
   color: #333;
   background-color: #f8f8f8;
 }
-/* Dark Theme Header */
+
+/* Header Section: Styling for the header and its contents */
 header {
   background: #222;
   padding: 10px 0;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
 }
 
-/* Top Bar */
+/* Top Bar: Sets the background color and text formatting for the top banner */
 .top-bar {
   text-align: center;
   background: #333;
@@ -28,7 +30,7 @@ header {
   border-bottom: 2px solid #ffcc00;
 }
 
-/* Navigation Bar */
+/* Navigation Bar: Flexbox layout to align logo and navigation links */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -38,21 +40,22 @@ header {
   margin: 0 auto;
 }
 
-/* Logo */
+/* Logo Styling: Font size and style for the salon's logo */
 .logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #ffcc00;
+  font-size: 28px;
+  font-weight: bolder;
+  color: yellowgreen;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-/* Navigation Links */
+/* Navigation Links: Styling the links in the navigation bar */
 .nav-links {
   display: flex;
   gap: 20px;
 }
 
+/* Styling for each navigation link */
 .nav-links a {
   text-decoration: none;
   font-size: 18px;
@@ -63,106 +66,20 @@ header {
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Hover Effect */
+/* Hover Effect: Changes background and text color when hovering over a link */
 .nav-links a:hover {
   background: #ffcc00;
   color: #222;
 }
 
-.logo {
-  font-size: 28px;
-  font-weight: bolder;
-  color: yellowgreen;
-}
-/* end for nav */
-
-.booking-container {
-  background-color: #f1f1f1;
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-}
-
-.booking-summary {
-  display: flex;
-  flex-flow: column;
-  border: 2px solid #390123;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 0 5px #720451;
-}
-
-.booking-summary h2 {
-  color: black;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.booking-summary label {
-  display: block;
-  /* margin-top: 10px; */
-  font-weight: bold;
-  color: #4a4a4a;
-}
-
-.booking-summary select {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-button {
-  width: 100%;
-  padding: 10px;
-  color: black;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-top: 10px;
-  border: 2px solid #390123;
-  border-radius: 10px;
-  box-shadow: 0 0 5px #720451;
-}
-
-button:hover {
-  background-color: #f4d1c7;
-}
-
-#booking-result {
-  margin-top: 20px;
-  font-size: 18px;
-  text-align: center;
-}
-
-#booking-result p {
-  margin: 10px 0;
-}
-
-footer {
-  margin-top: 20px;
-  padding: 10px 0px;
-  text-align: center;
-  background: #f4d1c7;
-  background-size: cover;
-}
-
-.checkboxcontainer {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  margin-top: 10px;
-}
-
-/* Main Container */
+/* Booking Container: Layout for the booking page */
 .booking-container {
   display: flex;
   justify-content: center;
   padding: 30px;
 }
 
+/* Booking Summary Card: Styling for the booking details card */
 .booking-summary {
   background-color: #222; /* Dark card background */
   border-radius: 10px;
@@ -172,39 +89,86 @@ footer {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* Booking Summary Header: Styling the header inside the booking card */
 .booking-summary h2 {
   font-size: 28px;
   color: #ffcc00;
   margin-bottom: 20px;
 }
 
+/* Label Styling: Labels for form fields */
 label {
   font-size: 16px;
   color: #bbb; /* Light color for labels */
   margin-bottom: 5px;
 }
 
-select,
-button {
+/* Select Input Fields: Styling for dropdown menus */
+select {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
-  border: none;
-  border-radius: 6px;
-  background-color: #444; /* Dark background for inputs */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #444; /* Dark background */
   color: #f1f1f1; /* Light text */
-  font-size: 16px;
 }
 
+/* Button Styling: General styling for buttons */
 button {
-  background-color: #ffcc00; /* Golden button */
+  width: auto;
+  padding: 10px;
+  color: black;
+  border-radius: 4px;
   cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  border: 2px solid #390123;
+  box-shadow: 0 0 5px #720451;
+  background-color: #ffcc00; /* Golden button */
 }
 
+/* Button Hover Effect: Changes the background color on hover */
 button:hover {
-  background-color: #e6b800; /* Hover effect */
+  background-color: #e6b800;
 }
 
+/* Booking Result Section: Displays the results of the booking */
+#booking-result {
+  margin-top: 20px;
+  background-color: #333;
+  padding: 15px;
+  border-radius: 6px;
+  color: #fff;
+}
+
+#total-cost,
+#total-duration {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Footer Section: Styling for the footer at the bottom of the page */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #222;
+  color: #ffcc00;
+  font-size: 14px;
+  position: relative;
+}
+
+footer a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+/* Footer Link Hover Effect: Underlines the footer link on hover */
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Checkbox Container: Styling for the checkbox area in the booking form */
 .checkboxcontainer {
   margin-bottom: 15px;
   display: flex;
@@ -222,40 +186,7 @@ button:hover {
   color: #bbb;
 }
 
-/* Booking Result Section */
-#booking-result {
-  margin-top: 20px;
-  background-color: #333;
-  padding: 15px;
-  border-radius: 6px;
-  color: #fff;
-}
-
-#total-cost,
-#total-duration {
-  font-weight: bold;
-  font-size: 18px;
-}
-
-footer {
-  text-align: center;
-  padding: 15px;
-  background-color: #222;
-  color: #ffcc00;
-  font-size: 14px;
-  position: relative;
-}
-
-footer a {
-  color: #ffcc00;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* Form Styling */
+/* Form Styling: Styling for the signup/login form */
 form {
   width: 100%;
   max-width: 400px;
@@ -265,7 +196,7 @@ form {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Input Fields */
+/* Input Fields in Form: Styling for text and email inputs */
 form input[type="text"],
 form input[type="email"] {
   width: 100%;
@@ -276,15 +207,16 @@ form input[type="email"] {
   transition: border-color 0.3s ease;
 }
 
+/* Focus Effect for Input Fields: Changes border color when input fields are focused */
 form input[type="text"]:focus,
 form input[type="email"]:focus {
   border-color: #5c9ead;
   outline: none;
 }
 
-/* Button Styling */
+/* Submit Button Styling: Styling for the form submit button */
 form button {
-  width: 100%;
+  width: 90%;
   padding: 12px;
   margin-top: 15px;
   background-color: #b91879;
@@ -296,9 +228,8 @@ form button {
   transition: background-color 0.3s ease;
 }
 
-/* Container */
+/* Main Container: General layout for the page content */
 .container {
-  /* max-width: 800px; */
   justify-content: center;
   justify-items: center;
   margin: auto;
