@@ -98,4 +98,4 @@ The Hair Salon Scheduler is designed to offer a seamless online booking experien
 
 Developed By: Dhruv
 Technology Stack: HTML, CSS, JavaScript 
-Purpose: Web Development Course at Conestoga College
+Purpose: Web Development Course at Conestoga College 
