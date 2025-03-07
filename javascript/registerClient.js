@@ -28,7 +28,7 @@ function registerNewClient() {
   }
 
   // Validate phone number format (expected format: (123) 456-7890)
-  const phonePattern = /^\(\d{3}\) \d{3}-\d{4}$/;
+  const phonePattern = /^\d{3}\d{3}\d{4}$/;
   if (!phone.match(phonePattern)) {
     alert("Invalid phone format. Use (123) 456-7890."); // Alert if phone format is incorrect
     return false; // Stop execution if phone format is invalid
@@ -64,11 +64,8 @@ function registerNewClient() {
     alert(
       "Registration successful! You may now proceed to book an appointment."
     );
+    setTimeout(function () {
+      window.location.href = "/pages/appointment.html";
+    }, 2000);
   }
-}
-
-// Optional function to handle redirect (you can implement this as needed)
-function testRedirect() {
-  // Redirect the user to the signup page (you can customize the URL)
-  window.location.href = "/pages/signup.html";
 }

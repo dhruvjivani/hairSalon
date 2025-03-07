@@ -17,11 +17,32 @@ let services = [
   },
 ];
 
+// Function to calculate total duration of selected services
+function calculateDuration(choosenServices) {
+  let totalDuration = 0;
+
+  // Loop through each chosen service to accumulate total duration
+  for (let item of choosenServices) {
+    totalDuration += item.duration; // Add service duration to total duration
+  }
+
+  return totalDuration;
+}
+
+// Function to calculate total price of selected services
+function calculateServiceCost(choosenServices) {
+  let totalPrice = 0;
+
+  // Loop through each chosen service to accumulate total price
+  for (let item of choosenServices) {
+    totalPrice += item.price; // Add service price to total price
+  }
+
+  return totalPrice;
+}
+
 // Function to calculate the total price and duration of selected services
 function calculateTotal() {
-  // Get the selected stylist from the dropdown (not used in this logic)
-  let hairdresser = document.getElementById("stylist").value;
-
   // Check if each service is selected using checkbox elements
   let isnailart = document.getElementById("nailart").checked;
   let iseyebrows = document.getElementById("eyebrows").checked;
@@ -43,15 +64,9 @@ function calculateTotal() {
     choosenServices.push(services[2]); // Add 'package' service
   }
 
-  // Variables to calculate total price and total duration of chosen services
-  let totalPrice = 0;
-  let totalDuration = 0;
-
-  // Loop through each chosen service to accumulate total price and duration
-  for (let item of choosenServices) {
-    totalPrice = totalPrice + item.price; // Add service price to total price
-    totalDuration = totalDuration + item.duration; // Add service duration to total duration
-  }
+  // Calculate the total price and duration using the respective functions
+  let totalPrice = calculateServiceCost(choosenServices);
+  let totalDuration = calculateDuration(choosenServices);
 
   // Display the total price and duration in the respective HTML elements
   document.getElementById("total-cost").textContent = "$ " + totalPrice;
@@ -60,4 +75,7 @@ function calculateTotal() {
 
   // Show an alert to the user confirming the booking is completed
   alert("Your booking is completed.");
+  setTimeout(function () {
+    window.location.href = "/pages/registerClient.html";
+  }, 2000);
 }

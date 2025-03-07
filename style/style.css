@@ -404,3 +404,86 @@ iframe {
   border: none;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
+
+/* Styling the dropdown and input fields */
+.hero div {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 1.1rem;
+  color: #555;
+  display: block;
+  margin-bottom: 5px;
+}
+
+select,
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+select:focus,
+input:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+/* Disabled state styling for select */
+select:disabled {
+  background-color: #f0f0f0;
+}
+
+/* Button styling */
+#book-btn {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+#book-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+#book-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Confirmation message styling */
+#confirmation-message {
+  font-size: 1.1rem;
+  color: green;
+  margin-top: 20px;
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  select,
+  input,
+  #book-btn {
+    font-size: 1rem;
+    padding: 8px;
+  }
+}
