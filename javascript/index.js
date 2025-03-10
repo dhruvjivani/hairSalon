@@ -1,125 +1,64 @@
-let userData = {
-  username: "user@example.com",
-  password: "User@123",
-}; // Store user data globally to simulate a simple user authentication system
+function signUp() {
+  // Get the values from the form
+  const username = document.getElementById("username").value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+  const confirmPassword = document.getElementById("confirmPassword").value;
 
-// Function to handle user signup
-function signUp(event) {
-  event.preventDefault(); // Prevent the default form submission behavior
-
-  // Get input values from the signup form
-  const username = document.getElementById("username").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const password = document.getElementById("password").value.trim();
-  const confirmPassword = document
-    .getElementById("confirmPassword")
-    .value.trim();
-  const message = document.getElementById("message"); // Message element to display errors/success
-
-  // Clear any previous messages
-  message.textContent = "";
-
-  // Validation rules for user input
-  if (!username || !email || !password || !confirmPassword) {
-    showMessage(message, "Please fill in all fields.", "red");
-    return; // Stop if any field is empty
-  }
-  if (username.length < 3) {
-    showMessage(message, "Username must be at least 3 characters.", "red");
-    return;
-  }
-  if (!/^[a-zA-Z0-9]+$/.test(username)) {
-    showMessage(
-      message,
-      "Username can only contain letters and numbers.",
-      "red"
-    );
-    return;
-  }
-  if (!/^\S+@\S+\.\S+$/.test(email)) {
-    showMessage(message, "Enter a valid email address.", "red");
-    return;
-  }
-  if (password.length < 6) {
-    showMessage(message, "Password must be at least 6 characters.", "red");
-    return;
-  }
-  if (!/[A-Z]/.test(password) || !/[0-9]/.test(password)) {
-    showMessage(
-      message,
-      "Password must include at least one uppercase letter and one number.",
-      "red"
-    );
-    return;
-  }
+  // Validate password match
   if (password !== confirmPassword) {
-    showMessage(message, "Passwords do not match.", "red");
+    document.getElementById("message").textContent = "Passwords do not match!";
     return;
   }
 
-  // If validation passes, store the user data in the global variable
-  userData = { username, email, password };
+  // Create user object to store
+  const user = {
+    username: username,
+    email: email,
+    password: password,
+  };
 
-  // Show success alert
-  alert("Signup successful! You will be redirected to the login page.");
+  // Store user data in localStorage
+  let users = JSON.parse(localStorage.getItem("users")) || []; // Get existing users or create an empty array if none exist
+  users.push(user); // Add the new user to the list
+  localStorage.setItem("users", JSON.stringify(users)); // Store the updated users list
 
-  // Hide the signup form and show the login form
-  document.querySelector(".signup-container").style.display = "none";
-  document.getElementById("loginSection").style.display = "block";
+  // Provide feedback
+  document.getElementById("message").textContent =
+    "Signup successful! You can now log in.";
+
+  // Show an alert and redirect to login page
+  alert("Signup successful! You can now log in.");
+  setTimeout(() => {
+    window.location.href = "/pages/login.html"; // Redirect to the login page
+  }, 2000); // Redirect after 2 seconds
 }
 
-// Function to handle user login
 function login() {
-  const loginUsername = document.getElementById("loginUsername").value.trim();
-  const loginPassword = document.getElementById("loginPassword").value.trim();
-  const loginMessage = document.getElementById("loginMessage"); // Message element for login feedback
+  const username = document.getElementById("loginUsername").value;
+  const password = document.getElementById("loginPassword").value;
 
-  // Clear previous login message
-  loginMessage.textContent = "";
-  console.log(userData);
-  // Check if login credentials match the stored user data
-  if (
-    userData &&
-    loginUsername === userData?.username &&
-    loginPassword === userData?.password
-  ) {
-    loginMessage.textContent = "Login successful!"; // Shows a success message if login details are correct.
-    alert("Login successful! Welcome back, " + userData.username + " 🎉");
-    showMessage(loginMessage, "Login successful!", "green");
-    let baseURL = window.location.origin;
+  // Get users from localStorage
+  const users = JSON.parse(localStorage.getItem("users")) || [];
 
-    // Redirect to the homepage (assuming homepage is at the base URL)
-    window.location.href = baseURL + "/pages/index.html";
+  // Find a user that matches the entered username
+  const user = users.find((u) => u.username === username);
+
+  // Check if the user exists and if the password matches
+  if (user) {
+    if (user.password === password) {
+      document.getElementById("loginMessage").textContent = "Login successful!";
+      // Optionally, redirect the user to a dashboard page or home page after login
+      setTimeout(() => {
+        window.location.href = "/pages/index.html"; // Redirect to the dashboard or homepage
+      }, 2000); // Redirect after 2 seconds
+    } else {
+      document.getElementById("loginMessage").textContent =
+        "Incorrect password!";
+      document.getElementById("loginMessage").style.color = "red";
+    }
   } else {
-    loginMessage.textContent = "Invalid username or password."; // Shows an error message if details are incorrect.
-  }
-}
-
-// Utility function to show messages (errors or success) on the page
-function showMessage(element, text, color) {
-  element.textContent = text;
-  element.style.color = color; // Set the text color (green for success, red for error)
-}
-
-// Function to confirm whether the user wants to move to the login page
-function confirmMoveToLogin() {
-  if (confirm("Are you sure you want to move to the login page?")) {
-    document.querySelector(".signup-container").style.display = "none"; // Hide signup section
-    document.getElementById("loginSection").style.display = "block"; // Show login section
-  }
-}
-
-// Function to confirm whether the user wants to move to the signup page
-function confirmMoveToSignup() {
-  if (confirm("Are you sure you want to move to the Signup page?")) {
-    document.querySelector(".signup-container").style.display = "block"; // Hide signup section
-    document.getElementById("loginSection").style.display = "none"; // Show login section
-  }
-}
-
-//Forgot password
-function forgotpass() {
-  if (confirm("New Password link sent in you Email")) {
-    return null;
+    document.getElementById("loginMessage").textContent = "User not found!";
+    document.getElementById("loginMessage").style.color = "red";
   }
 }
