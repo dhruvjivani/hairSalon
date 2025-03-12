@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hairdresser Dashboard</title>
+    <link rel="stylesheet" href="../../style/style.css">
+    <style>
+        table {
+            width: 97.5%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .btn {
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            color: #fff;
+            border-radius: 4px;
+        }
+
+        .yes-btn {
+            background-color: #28a745;
+        }
+
+        .no-btn {
+            background-color: #dc3545;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="top-bar">Hairdresser Dashboard</div>
+        <nav class="navbar">
+            <div class="nav-links">
+                <!-- Navigation links to other pages of the website -->
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Location</a>
+                <a href="../login.html">Login</a>
+            </div>
+            <div class="logo">Velvet Touch Salon</div>
+        </nav>
+    </header>
+    <table id="appointmentsTable">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Service</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="appointmentBody">
+            <!-- Appointments will be populated here -->
+        </tbody>
+    </table>
+
+    <script src="../../javascript/dashboard.js"></script>
+</body>
+
+</html>

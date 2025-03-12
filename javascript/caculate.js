@@ -42,7 +42,7 @@ function calculateServiceCost(choosenServices) {
 }
 
 // Function to calculate the total price and duration of selected services
-function calculateTotal() {
+function Services() {
   // Check if each service is selected using checkbox elements
   let isnailart = document.getElementById("nailart").checked;
   let iseyebrows = document.getElementById("eyebrows").checked;

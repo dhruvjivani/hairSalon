@@ -56,6 +56,10 @@ Notifications about new offers
 
 5. Login Page
 
+Hairdresser login:
+Id: hairdresser@gmail.com
+password: hairdresser123
+
 Registered clients can log in to access their accounts and enjoy personalized services.
 
 Provides special perks for returning customers, enhancing client engagement and loyalty.
